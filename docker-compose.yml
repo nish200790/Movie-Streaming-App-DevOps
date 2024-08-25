@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   node-app:
-    image: nishant406/movie-app-backend-nodejs
+    image: nishant406/movie-streaming-backend
     container_name: node-app
     environment:
       DB_HOST: 54.234.134.92
@@ -19,7 +19,7 @@ services:
         condition: service_healthy
 
   web:
-    image: nishant406/movie-app-frontend
+    image: nishant406/movie-streaming-frontend
     container_name: web
     environment:
       API_URL: 54.234.134.92
